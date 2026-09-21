@@ -1,0 +1,52 @@
+Progra II
+
+Ricardo Sánchez Schuz
+risanchez@udec.cl
+*Se admite el uso de Claude
+Certamen 30% + Test 15% + Lab 15% + Proyecto final 40%
+*Explicar cada código que haga
+
+Clase 1 14-08-2026
+TIPO_ Permite crear una variable que guarda un valor en un objeto
+int juan=40; (Se guarda en la memoria un objeto con un cierto valor
+int *(&juan) = 40; (Como tal el sistema guarda la dirección, la única forma de saber en dónde se encuentra es con el &)
+&juan (Será la dirección dada por el sistema)
+
+PUNTEROS_ C crea punteros que se pueden guardar una dirección
+int* P1 = &juan; (De esta forma se pueden guardar direcciones)
+a = *p1 x 20;
+Aplications Programming Interface
+
+Clase 2 17-08
+
+Objeto: en c representa un sector de la memoria en el cual se guarda un valor los valores básicos de un cierto tipo.
+ejemplo:
+4 Bytes representan un sector o objeto para un número entero (47) como se escribe en binario el número 47 puede o no utilizar todos los bytes
+
+*Un aspecto importante en c es comprender los TIPOS, en c un tipo puede crear una variable la cual se almacena automáticamente en un sector de la memoria que pasa a llamarse un objeto. Una analogía que nos sirve a comprender un objeto como una casa en una calle muy larga que tiene una dirección y un tamaño.
+
+El tamaño de la casa (bytes)
+Posee dirección ( posición 1000)
+
+Tipos:
+Caracteres: char
+Enteros: int
+Decimales: float
+
+Para números enteros se utilizan 4 bytes app.
+
+CARACTERES_ Un carácter o una letra se representa por el tipo char y siempre ocupa 1 byte.
+
+char letra = "A";
+Cada carácter se representa en c, por un número entero que es un
+
+Un arreglo en C, permite guardar valores de un mismo TIPO y obtenerlos de forma independiente.
+Ej:
+int dat[4] = { 40, 50, 3, 25};
+
+Esto son como las listas en python, tienen una posición
+
+Double tiene hasta 15 dígitos
+Float tiene hasta 9 dígitos aprox
+
+"Ya pero vieron mi libro? "
