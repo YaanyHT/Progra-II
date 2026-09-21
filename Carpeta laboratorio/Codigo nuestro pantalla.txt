@@ -1,0 +1,65 @@
+#include "LedControl.h"
+
+LedControl lc= LedControl(12,10,11,1);
+
+unsigned long delaytime1=500;
+unsigned long delaytime2=50;
+void rows(void);
+void columns(void);
+void dibujarA(void);
+
+
+void setup() {
+  lc.shutdown(0,false);
+  lc.setIntensity(0,8);
+  lc.clearDisplay(0);
+
+}
+
+void loop() {
+  rows();
+  delay(1000);
+  columns();
+  delay(1000);
+}
+void dibujarA(void) {
+  lc.setRow(0,0,B00000000);
+  lc.setRow(0,1,B00111100);
+  lc.setRow(0,2,B00100100);
+  lc.setRow(0,3,B00111100);
+  lc.setRow(0,4,B00100100);
+  lc.setRow(0,5,B00100100);
+  lc.setRow(0,6,B00100100);
+  lc.setRow(0,7,B00100100);
+}
+void rows(void){
+  byte letraA[8]={
+    B00000000,
+    B00111100,
+    B00100100,
+    B00111100,
+    B00100100,
+    B00100100,
+    B00100100,
+    B00100100
+  };
+
+  for(int row=0; row<8;row++){
+    delay(delaytime2);
+    lc.setRow(0,row,B10100000);
+    delay(delaytime2);
+    lc.setRow(0,row,(byte)0); 
+    for(int i=0; i<row;i++){
+      delay(delaytime2);
+      lc.setRow(0,row,B10100000);
+      delay(delaytime2);
+      lc.setRow(0,row,(byte)0);
+    }
+
+  }
+}
+
+
+void columns(void) {
+  dibujarA();
+}
